@@ -22,5 +22,6 @@ public class AmazontTest {
     @Test
     public void testAmazon() {
         driver.get("https://www.amazon.fr");
+        int i = 0;
     }
 }
