@@ -13,7 +13,7 @@ public class HomePage {
 
     WebDriver driver;
     final static int TIMEOUT_SIDE_PANEL = 5;
-    By menuHamburger = By.cssSelector("nav-hamburger-menu");
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
 
@@ -21,7 +21,7 @@ public class HomePage {
 
     public void goToGamesAndConsolesPage(){
 
-        driver.findElement(menuHamburger).click();
+        driver.findElement(By.cssSelector("#nav-hamburger-menu")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_SIDE_PANEL));
         WebElement buttonMenuJeuxVideo = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[data-menu-id='12']")));
         buttonMenuJeuxVideo.click();
