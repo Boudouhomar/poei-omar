@@ -31,7 +31,7 @@ public class ProductPage {
     }
 
     public ProductPage addToCart(){
-        driver.findElement(By.cssSelector("#add-to-cart-button")).click();
+        driver.findElement(By.id("add-to-cart-button")).click();
         return new ProductPage(driver);
     }
 
